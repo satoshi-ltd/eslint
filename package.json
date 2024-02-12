@@ -1,0 +1,32 @@
+{
+  "name": "@satoshi-ltd/eslint",
+  "private": false,
+  "version": "0.1.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satoshi-ltd/eslint.git"
+  },
+  "main": ".eslintrc.js",
+  "files": [
+    ".eslintrc.js",
+    "rules/*"
+  ],
+  "scripts": {
+    "pipeline": "yarn version --patch",
+    "postversion": "git push --set-upstream origin master && git push --tags",
+    "publish:release": "yarn pipeline && npm publish --access public"
+  },
+  "dependencies": {
+    "eslint": "^8.9",
+    "eslint-config-prettier": "^8.3",
+    "eslint-formatter-codeframe": "^7.32",
+    "eslint-plugin-babel": "^5.3",
+    "eslint-plugin-import": "^2.25",
+    "eslint-plugin-jsx-a11y": "^6.5",
+    "eslint-plugin-prettier": "^4.0",
+    "eslint-plugin-react": "^7.28",
+    "eslint-plugin-react-hooks": "^4.3",
+    "prettier": "^2.2.1"
+  }
+}
